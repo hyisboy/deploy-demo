@@ -1,0 +1,59 @@
+@import './base';
+$form_base_height: .4rem;
+.my_select_width {
+    width: 1.6rem;
+}
+.my_input_width {
+    ::v-deep &.my-input {
+        width: 2.2rem;
+    }
+    ::v-deep &.ifire-button{
+        width: 2.2rem;
+    }
+}
+.my_input_width-2 {
+    ::v-deep &.my-input {
+        width: 3.2rem;
+    }
+    ::v-deep &.ifire-button{
+        width: 3.2rem;
+    }
+}
+.my_input_width-large {
+    ::v-deep &.my-input {
+        width: 8.1rem;
+    }
+}
+.my_input_height{
+    height: $form_base_height
+}
+.my_box_width-large{
+    width: 8.1rem;
+}
+.my_vertical-top{
+    vertical-align: top;
+}
+::v-deep .el-form-item__label{
+   color: #f5f6f7; font-size: .14rem;
+}
+
+::v-deep .el-radio__label{
+    font-size: .14rem;
+}
+::v-deep .el-form-item__content{
+    line-height: $form_base_height; font-size: .14rem;
+}
+::v-deep .el-form-item__label{
+    height: $form_base_height;line-height: $form_base_height;
+}
+::v-deep .el-form-item {
+    height: $form_base_height;line-height: $form_base_height;
+}
+.my_radio{
+    ::v-deep .el-radio{
+     color:#f5f6f7;
+     &.is-checked{
+        color: $color_primary;
+     }
+   } 
+}

@@ -1,0 +1,316 @@
+$color_primary: #20A3F5; // 主色系
+$color_active: #20A3F5; //选中颜色
+$color_danger:#F56C6C; // 危险色
+$color_warning:#E6A23C; // 警告色
+$color_success:#67C23A; //成功色
+$color_purpe:#8e79df; // 紫色
+$color_blue_ligth: #4ad0ba; //浅蓝
+$color_light:#909399; // 浅色
+$color_info: #303133; // 
+$color_base: #000;
+$color_disable:#C0C4CC;
+$color_light_white: #bcbcbd;
+$color_second: #606266; // 二级文字色
+$primary_border_color: rgba(#20A3F5, .4);
+
+$bg_base: #f5f6f7; // 灰色背景
+$bg_primary: #1888CB; // 
+$bg_li: #1B368A;
+$bg_box:#242B43;
+$border_color_bar: #2a2f32;
+$base_shadow_val: 0 .02rem .12rem 0 rgba(0, 0, 0, 0.1);
+
+$tree_width: 3rem;
+@mixin wrap_box_padding{
+   padding:  0 .15rem; box-sizing: border-box;
+}
+// 导出js变量
+:export {
+    colorPrimary: $color_primary;
+    colorDanger: $color_danger;
+    colorSuccess: $color_success;
+    colorBlueLight: $color_blue_ligth;
+    colorPurpe: $color_purpe;
+}
+
+/* mixin */
+.relative {
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fl_left {
+    float: left;
+}
+
+.fl_right {
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+
+    &::before {
+        display: table;
+        content: '';
+    }
+}
+
+/* text color  */
+.tc_white {
+    color: #fff;
+}
+
+.tc_second {
+    color: $color_second;
+}
+
+.tc_light {
+    color: $color_light;
+}
+
+.tc_primary {
+    color: $color_primary;
+}
+
+.tc_danger {
+    color: $color_danger;
+}
+
+.tc_warning {
+    color: $color_warning;
+}
+
+.tc_info {
+    color: $color_info;
+}
+
+.tc_success {
+    color: $color_success;
+}
+
+.tc_purpe {
+    color: $color_purpe;
+}
+
+.lv_tc_primary{
+    color: $color_primary !important;
+}
+
+/* bg color */
+
+.bg_white {
+    background-color: #fff;
+}
+
+.bg_primary {
+    background-color: $color_primary;
+}
+
+.bg_danger {
+    background-color: $color_danger;
+}
+
+.bg_warning {
+    background-color: $color_warning;
+}
+
+.bg_info {
+    background-color: $color_info;
+}
+
+.bg_success {
+    background-color: $color_success;
+}
+
+.bg_purpe {
+    background-color: $color_purpe;
+}
+
+/* text-align */
+.ta_center {
+    text-align: center;
+}
+
+.ta_right {
+    text-align: right;
+}
+
+.ta_left {
+    text-align: left;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; color: #fff;
+}
+
+/* margin */
+.mg_null {
+    margin: 0;
+}
+
+.mgl_small {
+    margin-left: .1rem;
+}
+
+.mgl_mini {
+    margin-left: .05rem;
+}
+
+.mgt_small {
+    margin-top: .1rem;
+}
+
+.mgr_mini {
+    margin-right: .05rem;
+}
+
+.mgr_small {
+    margin-right: .1rem;
+}
+
+.mgr_normal {
+    margin-right: .2rem;
+}
+
+.mgb_small {
+    margin-bottom: .1rem;
+}
+
+.mgb_mini {
+    margin-bottom: .05rem;
+}
+
+.mgb_info {
+    margin-bottom: .2rem;
+}
+
+.mg_ {
+    margin: 0 -0.1rem;
+}
+
+/* font-size 字体大小*/
+.fs_mini {
+    font-size: .1rem;
+}
+
+.fs_small {
+    font-size: .12rem;
+}
+
+.fs_info {
+    font-size: .14rem;
+}
+
+.fs_large {
+    font-size: .16rem;
+}
+
+.fs_plus {
+    font-size: .18rem;
+}
+
+.fs_plus_ {
+    font-size: .2rem;
+}
+
+.fs_plus__ {
+    font-size: .24rem;
+}
+
+/*  cursor */
+
+.pointer {
+    cursor: pointer;
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+/* flex box */
+.flex_box {
+    display: flex;
+}
+
+.full_height {
+    height: 100%;
+}
+
+.base-shadow {
+    box-shadow: 0 .02rem .12rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.dark-shadow {
+    box-shadow: 0 .02rem .04rem rgba(0, 0, 0, .12), 0 0 .06rem rgba(0, 0, 0, .04)
+}
+
+.base-radius {
+    border-radius: .04rem;
+}
+
+/*border*/
+.border_bottom {
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: .01rem;
+        background: $primary_border_color;
+    }
+
+}
+
+/* animation */
+
+// 边栏 收起 动画
+@mixin sidebar_transition {
+    transition: .3s all ease-in-out;
+}
+
+.signal_icon {
+    width: .2rem;
+    height: .2rem;
+}
+
+.height_info {
+    height: .4rem;
+}
+
+.title-pre {
+    position: relative;
+    border-left: .02rem solid #0E94FC;
+    box-sizing: border-box;
+
+    &::before {
+        $_w_unit: .2rem;
+        content: "\e601";
+        color: $color_primary;
+        font-family: "iconfont" !important;
+        font-style: normal;
+        font-size: .18rem;
+        position: absolute;
+        width: $_w_unit;
+        height: 100%;
+        line-height: inherit;
+        left: -$_w_unit;
+    }
+}
+
+
+/* icon */
